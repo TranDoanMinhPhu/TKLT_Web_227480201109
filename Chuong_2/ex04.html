@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng ký xét tuyển</title>
+    <style>
+        label{margin-left: 30%;
+        font-size: 15px;}
+        h2{
+            font-family: Verdana;
+            font-size: 20px;
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <table width="100%">
+        <tr>
+            <td align="left">
+                <b>TRƯỜNG ĐẠI HỌC BẠC LIÊU</b><br>
+                KHOA KỸ THUẬT VÀ CÔNG NGHỆ
+            </td>
+            <td align="right">
+                <b>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</b><br>
+                Độc lập - Tự do - Hạnh phúc
+            </td>
+        </tr>
+    </table>
+
+    <h2 align="center">ĐĂNG KÝ XÉT TUYỂN</h2>
+
+    <form>
+        <p>
+            <label>Họ tên:</label>
+            <input type="text" name="hoten">
+        </p>
+
+        <p>
+            <label>Giới tính:</label>
+            <input type="radio" name="gioitinh" value="Nam"> Nam
+            <input type="radio" name="gioitinh" value="Nữ"> Nữ
+        </p>
+
+        <p>
+            <label>Ngành thi:</label><br>
+            <input type="radio" name="nganh" value="CNTT" style="margin-left: 35%;"> Công nghệ thông tin<br>
+            <input type="radio" name="nganh" value="Mầm non" style="margin-left: 35%;"> Mầm non<br>
+            <input type="radio" name="nganh" value="Âm nhạc" style="margin-left: 35%;"> Âm nhạc
+        </p>
+
+        <p>
+            <button type="submit" style="margin-left: 33%;">Đồng ý</button>
+            <button type="reset" style="margin: 0.5%;">Không đồng ý</button>
+        </p>
+    </form>
+
+</body>
+</html>
