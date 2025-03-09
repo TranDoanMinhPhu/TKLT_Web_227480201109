@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3B</title>
+  </head>
+  <body>
+    <script language="JavaScript">
+      document.write(
+        "<h2>Tạo button và cửa sổ thông báo bẳng JavaScript</h2><br>"
+      );
+      document.write("<br>");
+      function tbmsg() {
+        var ms = document.getElementsByName("msg03")[0].value;
+        alert(ms + ", I am stydying web design with Javascript");
+      }
+    </script>
+    <form>
+      <input type="button" name="Hello" value="Hello" onclick="tbmsg()" />
+      <input type="text" name="msg03" value="Hello Everybody" />
+    </form>
+  </body>
+</html>

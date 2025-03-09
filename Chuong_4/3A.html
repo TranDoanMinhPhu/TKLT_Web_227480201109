@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3A</title>
+  </head>
+  <body>
+    <script language="JavaScript">
+      document.write(
+        "<h2>Tạo button và cửa sổ thông báo bẳng JavaScript</h2><br>"
+      );
+      document.write("<br>");
+      function tbmsg() {
+        var ms = document.getElementsByName("msg03")[0].value;
+        alert(ms + "Students");
+      }
+    </script>
+    <form>
+      <input type="button" name="welcome" value="Welcome" onclick="tbmsg()" />
+      <input type="text" name="msg03" value="Welcome to " />
+    </form>
+  </body>
+</html>
