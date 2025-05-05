@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập JavaScript 21A</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        input {
+            margin: 10px;
+            padding: 5px;
+            width: 100px;
+        }
+        button {
+            margin: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .math-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #pheptoan {
+            margin: 0 10px;
+            font-weight: bold;
+            font-size: 20px;
+            width: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>Tính toán 2 số</h3>
+        <div class="math-row">
+            <input type="text" id="so1" placeholder="Số 1">
+            <span id="pheptoan">?</span>
+            <input type="text" id="so2" placeholder="Số 2">
+        </div>
+        <input type="text" id="ketqua" placeholder="Kết quả" readonly><br>
+        <button onclick="chonPhepTinh('cong')">Cộng (+)</button>
+        <button onclick="chonPhepTinh('tru')">Trừ (-)</button>
+        <button onclick="chonPhepTinh('nhan')">Nhân (×)</button>
+        <button onclick="chonPhepTinh('chia')">Chia (÷)</button>
+    </div>
+
+    <script>
+        function chonPhepTinh(phep) {
+            let hienThi = document.getElementById("pheptoan");
+            let so1 = parseFloat(document.getElementById("so1").value) || 0;
+            let so2 = parseFloat(document.getElementById("so2").value) || 0;
+            let ketQua;
+
+            switch (phep) {
+                case 'cong':
+                    hienThi.textContent = '+';
+                    ketQua = so1 + so2;
+                    break;
+                case 'tru':
+                    hienThi.textContent = '-';
+                    ketQua = so1 - so2;
+                    break;
+                case 'nhan':
+                    hienThi.textContent = '×';
+                    ketQua = so1 * so2;
+                    break;
+                case 'chia':
+                    hienThi.textContent = '÷';
+                    ketQua = (so2 === 0) ? "Không thể chia cho 0" : (so1 / so2);
+                    break;
+                default:
+                    hienThi.textContent = '?';
+                    ketQua = "Chưa chọn phép tính";
+            }
+
+            document.getElementById("ketqua").value = ketQua;
+        }
+    </script>
+</body>
+</html>
