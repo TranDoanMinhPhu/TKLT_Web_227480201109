@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tính lương nhân viên</title>
+    <meta charset="UTF-8">
+</head>
+<body style="font-family: Arial; background-color: #e6f7ff; text-align: center;">
+    <h1>Nhập thông tin nhân viên:</h1>
+
+    Họ tên: <input type="text" id="HoTen"><br>
+    Năm vào làm: <input type="number" id="NamVaoLam"><br>
+    Hệ số: <input type="number" id="HeSo"><br>
+    Lương cơ sở: <input type="number" id="LuongCoSo"><br><br>
+
+    <button onclick="TinhLuong()">Tính Lương</button><hr>
+
+    Lương cơ bản: <input type="text" id="LuongCoBan" readonly><br>
+    Phụ cấp: <input type="text" id="PhuCap" readonly><br>
+    Thâm niên: <input type="text" id="ThamNien" readonly><br>
+    Thành tiền: <input type="text" id="ThanhTien" readonly>
+
+    <script>
+        function TinhLuong() {
+            var namHienTai = new Date().getFullYear();
+            var heSo = parseFloat(document.getElementById("HeSo").value) || 0;
+            var luongCoSo = parseFloat(document.getElementById("LuongCoSo").value) || 0;
+            var namVaoLam = parseInt(document.getElementById("NamVaoLam").value) || namHienTai;
+
+            var luongCoBan = heSo * luongCoSo;
+            var phuCap = luongCoBan * 0.25;
+            var thamNien = namHienTai - namVaoLam;
+            var thanhTien = luongCoBan + phuCap;
+
+            document.getElementById("LuongCoBan").value = luongCoBan.toFixed(2);
+            document.getElementById("PhuCap").value = phuCap.toFixed(2);
+            document.getElementById("ThamNien").value = thamNien;
+            document.getElementById("ThanhTien").value = thanhTien.toFixed(2);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tính tiền</title>
+    <meta charset="UTF-8">
+</head>
+<body style="font-family: Arial; background-color: #e6f7ff; text-align: center;">
+    <h1>Bạn hãy nhập vào số lượng và giá:</h1>
+    Số lượng: <input type="number" id="SoLuong"><br>
+    Đơn giá: <input type="number" id="DonGia" onkeyup="TinhTien()"><hr>
+    Thành tiền: <input type="text" id="ThanhTien" readonly> USD
+
+    <script>
+        function TinhTien() {
+            var soLuong = document.getElementById("SoLuong").value;
+            var donGia = document.getElementById("DonGia").value;
+            var thanhTien = soLuong * donGia;
+            document.getElementById("ThanhTien").value = thanhTien.toFixed(2);
+        }
+    </script>
+</body>
+</html>
